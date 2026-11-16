@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md. Maruf Bangabashi</title>
+<meta name="description" content="Md. Maruf Bangabashi — Lecturer in Computer Science and Engineering, Dhaka International University. Research in computer vision, medical imaging and trustworthy evaluation of deep learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1b1f24;--muted:#5b6470;--line:#e4e7eb;--accent:#1f4e8c;--accent-soft:#eaf1fb;--bg:#ffffff;--paper:#fafbfc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.5rem}
+nav .brand{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:1.1rem;color:var(--ink)}
+nav ul{list-style:none;display:flex;gap:1.2rem;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{color:var(--muted);font-size:.92rem;font-weight:500}nav ul a:hover{color:var(--accent);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto}
+main .wrap{padding:0 1.5rem}
+header.hero{display:grid;grid-template-columns:220px 1fr;gap:2.5rem;align-items:start;padding:3rem 0 2rem}
+.photo{width:220px;height:220px;border-radius:12px;object-fit:cover;background:var(--accent-soft);border:1px solid var(--line)}
+.initials{width:220px;height:220px;border-radius:12px;background:var(--accent-soft);display:none;align-items:center;justify-content:center;font-family:"Source Serif 4",serif;font-size:4rem;color:var(--accent);border:1px solid var(--line)}
+h1{font-family:"Source Serif 4",Georgia,serif;font-size:2.3rem;line-height:1.15;margin:0 0 .3rem}
+.role{color:var(--muted);margin:0 0 1rem;font-size:1.02rem}
+.links{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 0}
+.links a{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:999px;padding:.32rem .8rem;font-size:.88rem;color:var(--ink);background:#fff}
+.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.links svg{width:15px;height:15px;fill:currentColor}
+.callout{margin-top:1.2rem;background:var(--accent-soft);border-left:3px solid var(--accent);padding:.7rem 1rem;border-radius:6px;font-size:.95rem}
+section{padding:1.6rem 0;border-top:1px solid var(--line)}
+h2{font-family:"Source Serif 4",Georgia,serif;font-size:1.5rem;margin:0 0 1rem}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:1.4rem 0 .6rem;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tags span{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:.25rem .65rem;font-size:.9rem}
+.news{list-style:none;padding:0;margin:0}
+.news li{display:grid;grid-template-columns:90px 1fr;gap:1rem;padding:.35rem 0}
+.news .d{color:var(--muted);font-variant-numeric:tabular-nums;font-size:.92rem}
+.pubs{list-style:none;padding:0;margin:0}
+.pubs li{display:grid;grid-template-columns:42px 1fr;gap:.6rem;padding:.75rem 0;border-bottom:1px dashed var(--line)}
+.pubs li:last-child{border-bottom:0}
+.pubs p{margin:0;font-size:.95rem}
+.num{font-weight:600;color:var(--muted);font-size:.85rem;padding-top:.15rem}
+.me{font-weight:700;text-decoration:underline;text-decoration-color:#9db5d6;text-underline-offset:3px}
+.badges{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem}
+.badge,.btn{font-size:.75rem;border-radius:4px;padding:.12rem .5rem;font-weight:600}
+.badge.acc{background:#e8f5ec;color:#1e6b3a}
+.badge.rev{background:#fff4e0;color:#8a5a00}
+.badge.award{background:#fdecef;color:#9b1c35}
+.btn{border:1px solid var(--accent);color:var(--accent)}
+.btn:hover{background:var(--accent);color:#fff;text-decoration:none}
+.item{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.item b{font-weight:600}
+.item .when{color:var(--muted);font-size:.92rem}
+.sub{color:var(--muted);margin:.1rem 0 .4rem;font-size:.95rem}
+ul.plain{margin:.3rem 0 0;padding-left:1.1rem}
+ul.plain li{margin:.25rem 0}
+.entry{margin-bottom:1.1rem}
+footer{border-top:1px solid var(--line);padding:1.6rem 1.5rem;color:var(--muted);font-size:.85rem;text-align:center}
+@media (max-width:720px){
+ header.hero{grid-template-columns:1fr;gap:1.2rem;padding-top:2rem}
+ .photo,.initials{width:150px;height:150px}
+ h1{font-size:1.8rem}
+ nav ul{display:none}
+ .news li{grid-template-columns:1fr;gap:0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#top">Md. Maruf Bangabashi</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="Maruf_Bangabashi_CV.pdf" target="_blank">CV</a></li>
+  </ul>
+</div></nav>
+
+<main id="top"><div class="wrap">
+
+<header class="hero" id="about">
+  <div>
+    <img class="photo" src="photo.jpg" alt="Md. Maruf Bangabashi" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="initials">MB</div>
+  </div>
+  <div>
+    <h1>Md. Maruf Bangabashi</h1>
+    <p class="role">Lecturer, Department of Computer Science and Engineering<br>Dhaka International University, Bangladesh</p>
+    <p>I work on <b>computer vision and medical image analysis</b>, with a focus on making deep-learning results trustworthy.
+    My M.Sc. research at Mawlana Bhashani Science and Technology University audits popular image benchmarks for
+    near-duplicate leakage, showing how naïve data splits inflate reported accuracy and how models rely on shortcuts
+    such as colour rather than disease features. I am also interested in self-supervised learning, test-time adaptation,
+    multimodal fusion, and action recognition.</p>
+    <div class="callout">I am applying to <b>PhD programs for Fall 2027</b> and would be glad to hear from faculty working on related problems.</div>
+    <div class="links">
+      <a href="mailto:marufbangabashi@gmail.com"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5Z"/></svg>Email</a>
+      <a href="https://scholar.google.com/citations?user=1RKvuPsAAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-7 9.2V16c0 2.2 3.1 4 7 4s7-1.8 7-4v-3.8l-7 3.8-7-3.8Z"/></svg>Google Scholar</a>
+      <a href="https://www.linkedin.com/in/md-maruf-bangabashi-3042892b6/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2ZM8 19H5V9h3v10ZM6.5 7.7A1.7 1.7 0 1 1 8.2 6a1.7 1.7 0 0 1-1.7 1.7ZM19 19h-3v-4.9c0-1.2 0-2.7-1.6-2.7S12.5 12.7 12.5 14v5h-3V9h2.9v1.4c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7V19Z"/></svg>LinkedIn</a>
+      <a href="https://profile.diu.ac/md.marufbangabashi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2 2 7v2h20V7L12 2ZM4 11v7h3v-7H4Zm6.5 0v7h3v-7h-3ZM17 11v7h3v-7h-3ZM2 20v2h20v-2H2Z"/></svg>DIU Profile</a>
+      <a href="Maruf_Bangabashi_CV.pdf" target="_blank"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm-1 7V3.5L18.5 9H13ZM8 13h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg>CV (PDF)</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Research Interests</h2>
+  <div class="tags"><span>Computer Vision</span><span>Medical Imaging</span><span>Self-Supervised Learning</span><span>Test-Time Adaptation</span><span>Multimodal Fusion</span><span>Action Recognition</span><span>Benchmark Leakage &amp; Evaluation</span></div>
+</section>
+
+<section>
+  <h2>News</h2>
+  <ul class="news">
+    <li><span class="d">Nov 2026</span><span>🏆 Received the <b>Best Paper Award</b> at IEEE iCOSTE 2026 for our MRI benchmark leakage audit.</span></li>
+    <li><span class="d">2026</span><span>13 papers accepted at IEEE and international conferences, including iCOSTE, WIECON-ECE, COMPAS and SPICSCON.</span></li>
+    <li><span class="d">2026</span><span>Served as a reviewer for ECCT 2026 and ICEFronT 2026.</span></li>
+  </ul>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <p class="sub">My name is underlined. 3 journal articles under review · 13 accepted conference papers and book chapters.</p>
+  <h3>Journal Articles</h3>
+  <ul class="pubs">
+<li><span class="num">J1</span><div><p><span class="me">M. M. Bangabashi</span>, T. Rahman, A. Khandakar, M. M. Mia, M. M. Islam, M. K. Nasir, and M. A. Ayari, "Beyond Near-Perfect Accuracy: A Forensic Audit of a Saturated Litchi Leaf Disease Benchmark," <i>Journal of Agriculture and Food Research</i> (<b>Elsevier</b>).</p><div class="badges"><span class="badge rev">Under Review</span></div></div></li>
+<li><span class="num">J2</span><div><p><span class="me">M. M. Bangabashi</span>, T. Rahman, J. Biswas, M. M. Rahman, M. M. Rahman, M. K. Nasir, and S. Akter, "Faithfulness-Gated Decision Support for In-the-Wild Plant Disease Diagnosis," <i>Array</i> (<b>Elsevier</b>).</p><div class="badges"><span class="badge rev">Under Review</span></div></div></li>
+<li><span class="num">J3</span><div><p>J. Biswas, M. Islam, <span class="me">M. M. Bangabashi</span>, M. Akter, T. S. Nishi, M. K. Sheikh, M. R. Mia, and M. M. Anwar, "GuavaVision AI: An Explainable Deep Learning Framework for Automated Classification, Lesion Localization, and Segmentation of Guava Diseases," <i>PLOS ONE</i>.</p><div class="badges"><span class="badge rev">Under Review</span><a class="btn" href="https://www.biorxiv.org/content/10.64898/2026.06.18.733093v1.abstract" target="_blank" rel="noopener">bioRxiv</a></div></div></li>
+  </ul>
+  <h3>Conference Papers &amp; Book Chapters</h3>
+  <ul class="pubs">
+<li><span class="num">C1</span><div><p><span class="me">M. M. Bangabashi</span>, T. Hasan, and R. Mahmud, "Pooled and Compromised: A Leakage Audit of a Popular MRI Benchmark," In <i>12th IEEE Int. Conf. on Sustainable Technologies and Engineering (iCOSTE 2026)</i>, Cox's Bazar, Bangladesh, Nov. 2026.</p><div class="badges"><span class="badge acc">Accepted</span><span class="badge award">🏆 Best Paper Award</span><a class="btn" href="FP_ieee-icoste_3818.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C2</span><div><p><span class="me">M. M. Bangabashi</span>, M. M. Rahman, J. I. Rifat, J. C. Nath, N. Sorna, and M. J. F. Jim, "From Silence to Surge: Modeling Zero-Inflated Dengue Outbreaks in Bangladesh," In <i>IEEE Int. Women in Engineering Conf. on Electrical and Computer Engineering (WIECON-ECE 2026)</i>, Dhaka, Bangladesh, Oct. 2026.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="116.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C3</span><div><p><span class="me">M. M. Bangabashi</span>, T. Rahman, J. Biswas, M. S. U. M. Antor, and M. K. Nasir, "Auditing Near-Duplicate Leakage in a Litchi Leaf-Disease Benchmark," In <i>IEEE 3rd Int. Conf. on Computing, Applications and Systems (COMPAS 2026)</i>, Dhaka, Bangladesh, Oct. 2026.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="382_Paper.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C4</span><div><p><span class="me">M. M. Bangabashi</span>, M. S. Biswas, M. S. U. M. Antor, M. T. Rahman, M. M. Rahman, and J. Biswas, "Parameter-Efficient Hybrid Quantum Convolutional Networks: Mitigating Overfitting via 8-Qubit Bottlenecks and GUI-Enabled Inference in the NISQ Era," In <i>IEEE Int. Conf. on Signal Processing, Information, Communication and Systems (SPICSCON 2026)</i>, Natore, Bangladesh, Aug. 2026.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="1121.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C5</span><div><p><span class="me">M. M. Bangabashi</span>, T. Hasan, G. Mahmud, M. M. Rahman, M. T. Rahman, and J. Biswas, "Echoes of Unrest: A Multimodal NLP Framework for Early Warning of Fake News and Violence-Driven Mob Activity," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>, book chapter, <b>Taylor & Francis</b>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="https://arxiv.org/abs/2607.02734" target="_blank" rel="noopener">arXiv</a><a class="btn" href="472_Camera%20Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C6</span><div><p>T. Rahman, <span class="me">M. M. Bangabashi</span>, A. Khatun, and S. M. Sazzad, "Graph-Enhanced Transformer Architecture for Multi-Class Cyberbullying Detection on Social Media," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>, book chapter, <b>Taylor & Francis</b>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="257_Camera%20Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C7</span><div><p>M. S. U. M. Antor, <span class="me">M. M. Bangabashi</span>, and N. K. Podder, "A Reproducible ConvNeXt Baseline for NIH ChestX-ray14 Multi-Label Classification with EMA, AMP, and Asymmetric Loss," In <i>IEEE SPICSCON 2026</i>, Natore, Bangladesh, Aug. 2026.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="334.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C8</span><div><p>M. N. Sakib, G. Mahmud, <span class="me">M. M. Bangabashi</span>, U. A. M. Istia, M. J. Islam, P. Sarker, and A. Y. Prity, "Multi-Level Embedding Conformer Framework for Bengali Automatic Speech Recognition," In <i>3rd Int. Conf. on Big Data, IoT and Machine Learning (BIM 2025)</i>, book chapter, <b>Taylor & Francis</b>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="https://arxiv.org/abs/2601.09710" target="_blank" rel="noopener">arXiv</a><a class="btn" href="558_Camera%20Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C9</span><div><p>A. Mridha, M. M. Rahman, G. Mahmud, <span class="me">M. M. Bangabashi</span>, M. T. Rahman, and J. Biswas, "An Explainable Soft Voting Ensemble Framework for Cardiovascular Disease Prediction Using Large-Scale Clinical Data," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="497_Camera_Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C10</span><div><p>M. T. Rahman, M. S. R. Sourov, S. C. Shil, <span class="me">M. M. Bangabashi</span>, M. M. Rahman, and J. Biswas, "DIU Real-Time Transportation Tracking System," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>, book chapter, <b>Taylor & Francis</b>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="490_Camera%20Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C11</span><div><p>M. M. Rahman, S. Das, A. S. Akash, A. Mridha, M. T. Rahman, <span class="me">M. M. Bangabashi</span>, and J. Biswas, "An Explainable Machine Learning Framework for Mental Stress Detection Using Demographic, Behavioral, and Psychological Features with PSS-14 Scores," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>, book chapter, <b>Taylor & Francis</b>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="505_Camera%20Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C12</span><div><p>M. T. Rahman, P. C. Ray, M. S. Sarker, M. T. Ahmed, M. M. Rahman, <span class="me">M. M. Bangabashi</span>, and J. Biswas, "Transfer Learning-Based Brain Tumor MRI Classification Using VGG16 with Batch Normalization: Comparative Analysis and Adversarial Robustness Evaluation," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="493_Camera_Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+<li><span class="num">C13</span><div><p>M. M. Rahman, M. S. Hossain, S. Das, M. Sozon, N. H. Neom, M. T. Rahman, <span class="me">M. M. Bangabashi</span>, and J. Biswas, "Explainable Cardiovascular Risk Stratification in Bangladesh: Integrating Youden's J Statistic and SHAP," In <i>Int. Conf. on Electrical, Computer and Communication Technologies (ECCT 2026)</i>.</p><div class="badges"><span class="badge acc">Accepted</span><a class="btn" href="652_Camera_Ready.pdf" target="_blank" rel="noopener">PDF</a></div></div></li>
+  </ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="item"><b>M.Sc. in Computer Science and Engineering</b><span class="when">2024 – Jan 2027 (expected)</span></div>
+    <div class="sub">Mawlana Bhashani Science and Technology University (MBSTU), Tangail</div>
+    <ul class="plain"><li>Thesis: <i>Beyond Near-Perfect Accuracy: A Forensic Audit of a Saturated Litchi Leaf Disease Benchmark</i></li>
+    <li>Supervisor: <a href="https://cse.mbstu.ac.bd/teacher/dr-mostofa-kamal-nasir" target="_blank" rel="noopener">Dr. Mostofa Kamal Nasir</a>, Professor</li></ul>
+  </div>
+  <div class="entry">
+    <div class="item"><b>B.Sc. in Computer Science and Engineering</b><span class="when">2017 – 2022</span></div>
+    <div class="sub">Pabna University of Science and Technology (PUST)</div>
+    <ul class="plain"><li>CGPA 3.53/4.00 (last three semesters 3.88/4.00) · Merit position: 5th</li></ul>
+  </div>
+</section>
+
+<section id="teaching">
+  <h2>Teaching &amp; Supervision</h2>
+  <div class="entry">
+    <div class="item"><b>Lecturer, Dept. of CSE, Dhaka International University</b><span class="when">Feb 2024 – present</span></div>
+    <ul class="plain">
+      <li>Courses: Data Structures, Algorithms, Computer Networks, Computer Graphics, Microprocessors, Object Oriented Programming (Java), Software Engineering.</li>
+      <li>Supervised undergraduate theses on dengue outbreak modelling, a real-time campus transport tracking system, and robust brain tumor MRI classification, in collaboration with the DIU Research and Publication Cell — each led to an accepted conference paper.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Awards &amp; Scholarships</h2>
+  <ul class="plain">
+    <li><b>Best Paper Award</b>, 12th IEEE International Conference on Sustainable Technologies and Engineering (iCOSTE 2026).</li>
+    <li><b>University Merit Scholarship</b>, Pabna University of Science and Technology, for outstanding final-year results.</li>
+    <li><b>Government Talent Pool Scholarship</b>, Primary School Certificate (PSC) Examination, Government of Bangladesh.</li>
+  </ul>
+</section>
+
+<section id="service">
+  <h2>Service</h2>
+  <ul class="plain">
+    <li><b>Organizing Committee Member</b>, BIM 2025 and ECCT 2026, hosted by Dhaka International University.</li>
+    <li><b>Reviewer</b>, ECCT 2026 and ICEFronT 2026.</li>
+    <li><b>Member Secretary</b>, Credit Transfer Committee; <b>Batch Counsellor</b>; Member, Student Orientation Committee — Dept. of CSE, DIU.</li>
+    <li><b>Volunteer</b>, COVID-19 emergency response (medical oxygen supply).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:marufbangabashi@gmail.com">marufbangabashi@gmail.com</a> · <a href="mailto:maruf.cse@diu.ac">maruf.cse@diu.ac</a> (official)<br>
+  Dept. of CSE, Dhaka International University, Satarkul, Badda, Dhaka-1212, Bangladesh</p>
+</section>
+
+</div></main>
+<footer>© 2026 Md. Maruf Bangabashi · Last updated November 2026</footer>
+</body>
+</html>
